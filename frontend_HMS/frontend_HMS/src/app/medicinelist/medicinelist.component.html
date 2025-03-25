@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WELLCARE HOSPITALS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/add-medicine">Add Medicine</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="/update-medicine">Update Medicine</a>
+          </li> -->
+
+          <button (click)="logout()" class="btn btn-danger " style="margin-left: 10px;">Logout</button>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <hr>
+    
+    <h2 style="text-align: center; margin-top: 30PX;">Medicine List</h2> 
+    
+   <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+    
+    Welcome to Medicine list Dashboard. Please find the patient list below!!. </marquee></a>
+    
+    <hr>
+    
+    <a style="color: rgb(86, 86, 86); font-size: xx-large ;text-align: center;">Medicine list are shown below</a>
+    
+    
+        <br>
+
+
+
+<table class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th>Id</th>
+            <th>Drug Name</th>
+            <th>Stock</th>
+            <th>Action</th>
+           
+         
+        </tr>
+
+
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let medicine of medicines">
+            <td>{{medicine.id}}</td>
+            <td>{{medicine.drug}}</td>
+            <td>{{medicine.stock}}</td>
+            <td>
+                <button  type="submit" (click)="update(medicine.id)" class="btn btn-info">Update</button>
+
+                <button  type="submit" (click)="delete(medicine.id)" style="margin-left: 10px;"   class="btn btn-danger">Delete</button>
+
+
+
+
+
+            </td>
+         
+            
+        </tr>
+    </tbody>
+
+
+
+</table>

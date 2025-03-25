@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WELLCARE HOSPITALS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/create-patient">Add Patient</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/view-medicine">View Medicine</a>
+          </li>
+
+          <button (click)="logout()" class="btn btn-danger " style="margin-left: 10px;">Logout</button>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <hr>
+    
+    <h2 style="text-align: center; margin-top: 30PX;">Doctor's Dashboard</h2> 
+    
+   <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+    
+    Welcome to Patients Dashboard. Please find the patient list below!!. </marquee></a>
+    
+    <hr>
+    
+    <a style="color: rgb(86, 86, 86); font-size: xx-large ;text-align: center;">Current Patient List in the Queue</a>
+    
+    
+        <br>
+  
+
+
+<table class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood</th>
+            <th>Urgency</th>
+            <th>Action</th>
+            
+        </tr>
+
+
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <td>{{patient.id}}</td>
+            <td>{{patient.name}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.blood}}</td>
+            <td>{{patient.urgency}}</td>
+            <td>
+              <button (click)="update(patient.id)" class="btn btn-success">Update</button>
+              <button (click)="delete(patient.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+              <button (click)="view(patient.id)" class="btn btn-info" style="margin-left: 10px;">View Details</button>
+
+            </td>
+            
+        </tr>
+    </tbody>
+
+
+
+</table>

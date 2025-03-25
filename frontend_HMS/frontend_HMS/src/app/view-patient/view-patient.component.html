@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WELLCARE HOSPITALS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/docdash">Back</a>
+          </li>
+
+          
+
+          <button (click)="logout()" class="btn btn-danger ">Logout</button>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <hr>
+    
+    <h2 style="text-align: center; margin-top: 30PX;">Dashboard</h2> 
+    
+   <a   style="color: rgb(86, 86, 86); font-size: x-large; text-align: center; align-items: center;">
+    
+    Welcome to Patients Details. Please find the patient details below!!. </a>
+    
+    <hr>
+    
+    <a style="color: rgb(86, 86, 86); font-size: xx-large ;text-align: center;">Patient Details are as follows :- </a>
+    
+    
+        <br>
+  
+
+<div class="container">
+
+    <label>ID : <b>{{patient.id}}</b></label><br>
+
+    <label>Name : <b>{{patient.name}}</b></label><br>
+
+    <label>Age : <b>{{patient.age}}</b></label><br>
+
+    <label>Blood Group : <b>{{patient.blood}}</b></label><br>
+
+    <label>Dose : <b>{{patient.dose}}</b></label><br>
+
+    <label>Fees : <b>{{patient.fees}}</b></label><br>
+
+    
+    <label>Prescription : <b>{{patient.prescription}}</b></label><br>
+
+    
+    <label>Urgency : <b>{{patient.urgency}}</b></label><br>
+
+    
+</div>

@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WELLCARE HOSPITALS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/appointments">Appointments</a>
+          </li>
+
+          
+          <button (click)="logout()" class="btn btn-danger ">Logout</button>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+<div class="container">
+
+    <hr>
+    
+    <h2 style="text-align: center; margin-top: 30PX;">Admin Dashboard</h2> 
+    
+   <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+    
+    Welcome to Admin Dashboard. Please find the patient list below!!. Click Appointments to view and update Appointments, Click Add Appointment to add new Appointment</marquee></a>
+    
+    <hr>
+    
+    <a style="color: rgb(86, 86, 86); font-size: xx-large ;text-align: center;">Current Patient List in the Queue</a>
+    
+    
+        <br>
+  
+
+<table class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Fees</th>
+            <th>Urgency</th>
+            <th>Action</th>
+        </tr>
+
+
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <td>{{patient.id}}</td>
+            <td>{{patient.name}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.fees}}</td>
+            <td>{{patient.urgency}}</td>
+            <td>
+              <button (click)="delete(patient.id)" class="btn btn-danger" >Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+
+
+
+</table>

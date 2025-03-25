@@ -1,0 +1,56 @@
+/* Center the login box */
+.login-container {
+    width: 400px;
+    padding: 30px;
+    background-color: #a8dee0; /* Light Blue */
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 100px auto;
+  }
+  
+  /* Title styles */
+  h2 {
+    color: navy;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields and dropdown */
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Button container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Login button */
+  .login-btn {
+    background-color: #137a4a; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effects */
+  .login-btn:hover {
+    background-color: #0c5c38;
+  }
+  

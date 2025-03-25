@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WELLCARE HOSPITALS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="btn btn-outline-light me-2" routerLink="/doctor-login">Login as Doctor</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light" routerLink="/admin-login">Login as Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="container my-5 mb-5"> <!-- Added bottom margin to prevent footer overlap -->
+  <header class="text-center p-4 bg-primary text-white custom-header">
+  <h1>Welcome to Wellcare Hospitals</h1>
+  <p>Your health is our priority</p>
+</header>
+
+<h2 class="text-center mb-5 mt-5">Our Specialties</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Cardiology</h5>
+          <p>Heart care specialists</p>
+          <a class="btn btn-primary" routerLink="/cardiology">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Neurology</h5>
+          <p>Brain & Nervous System</p>
+          <a class="btn btn-primary" routerLink="/neurology">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Orthopedics</h5>
+          <p>Bone & Joint Care</p>
+          <a class="btn btn-primary" routerLink="/orthopedics">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Pediatrics</h5>
+          <p>Child Health Experts</p>
+          <a class="btn btn-primary" routerLink="/pediatrics">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <app-footer></app-footer>
+  
